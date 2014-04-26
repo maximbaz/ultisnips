@@ -16,10 +16,7 @@ function! UltiSnips#map_keys#MapKeys()
         exec "snoremap <silent> " . g:UltiSnipsExpandTrigger . " <Esc>:call UltiSnips#ExpandSnippet()<cr>"
     endif
 
-    if g:UltiSnipsTriggerInVisualMode
-        exec "xnoremap <silent> " . g:UltiSnipsExpandTrigger. " :call UltiSnips#SaveLastVisualSelection()<cr>gvs"
-    endif
-
+    exec "xnoremap <silent> " . g:UltiSnipsVisualExpandTrigger . " :call UltiSnips#SaveLastVisualSelection()<cr>gvs"
     exec "inoremap <silent> " . g:UltiSnipsListSnippets . " <C-R>=UltiSnips#ListSnippets()<cr>"
     exec "snoremap <silent> " . g:UltiSnipsListSnippets . " <Esc>:call UltiSnips#ListSnippets()<cr>"
 

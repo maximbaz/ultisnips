@@ -224,23 +224,22 @@ variables. Variables define the keys used to expand a snippet, jump forward
 and jump backwards within a snippet, and list all available snippets in the
 current expand context. The variables with their default values are: >
    g:UltiSnipsExpandTrigger               <tab>
+   g:UltiSnipsVisualExpandTrigger         g:UltiSnipsExpandTrigger
    g:UltiSnipsListSnippets                <c-tab>
    g:UltiSnipsJumpForwardTrigger          <c-j>
    g:UltiSnipsJumpBackwardTrigger         <c-k>
 
-The g:UltiSnipsExpandTrigger and g:UltiSnipsJumpForwardTrigger can be set to
-the same value. To simulate TextMate behavior, add the following lines to your
-vimrc file. >
+The g:UltiSnipsExpandTrigger, g:UltiSnipsVisualExpandTrigger and
+g:UltiSnipsJumpForwardTrigger can be set to the same value. In fact, the
+g:UltiSnipsVisualExpandTrigger by default uses the same key as you defined
+for the g:UltiSnipsExpandTrigger. To simulate TextMate behavior, add the
+following lines to your vimrc file: >
    let g:UltiSnipsExpandTrigger="<tab>"
    let g:UltiSnipsJumpForwardTrigger="<tab>"
    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 UltiSnips will only map the jump triggers while a snippet is active to
 interfer as little as possible with other mappings.
-
-You can control whether UltiSnips should expand a snippet in Visual mode by
-setting the global variable g:UltiSnipsTriggerInVisualMode (defaults to 1):
-   let g:UltiSnipsTriggerInVisualMode = 0
 
 The default value for g:UltiSnipsJumpBackwardTrigger interferes with the
 built-in complete function: |i_CTRL-X_CTRL-K|. A workaround is to add the
