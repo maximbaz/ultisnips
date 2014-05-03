@@ -1,3 +1,28 @@
+What this fork is about?
+========================
+
+It allows you to map ``Expand trigger in Visual mode`` to a new keystroke. 
+
+Unfortunately SirVer rejected the [pull request](https://github.com/SirVer/ultisnips/pull/290), so I had to keep this fork.
+
+Why you need this? 
+------------------
+
+I like ``<Tab>`` to fold the visual selection, but I also like ``<Tab>`` to expand trigger in Insert mode. 
+
+The original UltiSnips plugin uses the same keystroke for Insert and Visual modes, so it overwrites my folding mapping.
+
+Configuration
+-------------
+
+For backward compatibility, the default value equals to the value of ``g:UltiSnipsExpandTrigger`` mapping.
+
+Here is an example of how you can override it:
+
+    let g:UltiSnipsVisualExpandTrigger = "<C-Tab>"
+
+
+
 UltiSnips
 =========
 
